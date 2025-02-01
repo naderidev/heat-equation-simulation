@@ -54,8 +54,8 @@ $$u(𝑥,𝑡) = 100 \sin\left(\frac{𝜋𝑥}{𝐿}\right) e^{-𝛼^2\left(\fra
 
 To run the simulation, you can download the project and execute either the `index-en.html` file (for English) or the `index-fa.html` file (for Persian). Alternatively, you can use the following links to run the simulation online without downloading any files:
 
-- [Simulation in English](#)
-- [Simulation in Persian](#)
+- [Simulation in English](https://naderidev.github.io/heat-equation-simulation/index-en.html)
+- [Simulation in Persian](https://naderidev.github.io/heat-equation-simulation/index-fa.html)
 
 ### Project Presentation
 
