@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'Yekan Bakh Fat';
+    src: url("../fonts/Fat.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'Yekan Bakh Heavy';
+    src: url("../fonts/Heavy.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'Yekan Bakh Light';
+    src: url("../fonts/Light.ttf") format('truetype');
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+.bar {
+    stroke: none!important;
+    shape-rendering: crispEdges;
+    transition: all 0.5s;
+}
+.axis--y g{
+    margin-right: 1px;
+}
+
+.yb-light {
+    font-family: "Yekan Bakh Light", serif;
+}
+
+.yb-fat {
+    font-family: "Yekan Bakh Fat", serif;
+}
+
+.yb-heavy {
+    font-family: "Yekan Bakh Heavy", serif;
+}

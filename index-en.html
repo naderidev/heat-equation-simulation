@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Heat equation simulation
+    </title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body dir="ltr">
+    <div class="container-xl d-flex justify-content-center align-items-center h-100">
+        <div class="d-block p-2" id="setup-sec">
+            <h3 class="fw-border mb-1">
+                Simulating heat distribution in a rod
+            </h3>
+            <span class="fw-light">
+                Simulating heat distribution in a rod of a given length using the one-dimensional differential equation
+                of heat
+            </span>
+            <div class="row mt-3 align-items-center border border-1 border-secondary p-4 rounded-2">
+                <div class="col-sm-7">
+                    <div class="mb-3">
+                        <label for="rod-length" class="form-label fs-6 fw-light">Rod length in meters</label>
+                        <input type="number" class="form-control fw-light" id="rod-length" placeholder="in m">
+                    </div>
+                    <div class="mb-3">
+                        <label for="alpha-value" class="form-label fs-6 fw-light">Heat diffusion coefficient</label>
+                        <input type="number" class="form-control fw-light" id="alpha-value" placeholder="in m^2/s">
+                    </div>
+                    <div class="mb-3">
+                        <label for="duration-value" class="form-label fs-6 fw-light">Simulation duration</label>
+                        <input type="number" class="form-control fw-light" id="duration-value" value="20000"
+                            placeholder="in ms">
+                    </div>
+                </div>
+                <div class="col">
+                    <button type="button" id="simulate-btn" class="btn fw-normal w-100 btn-primary">Simulate</button>
+                    <small class="text-muted fw-light">
+                        Start simulation based on given values
+                    </small>
+                </div>
+            </div>
+            <small class="fw-light text-center d-block mt-2">
+                Designed and developed by Mohammadreza Naderi Akhourmeh
+            </small>
+        </div>
+        <div class="d-block p-2 d-none" id="simulation-sec">
+            <h3 class="fw-bolder mb-1">
+                Simulation of instantaneous heat distribution in the rod
+            </h3>
+            <span class="fw-light">
+                Simulating heat distribution in a rod of a given length using the one-dimensional differential equation
+                of heat
+            </span>
+            <div class="row mt-3 align-items-center border border-1 border-secondary p-4 rounded-2">
+                <div class="col-12">
+                    <div class="row mb-2 justify-content-between">
+                        <div class="col-auto">
+                            <span class="fw-light">
+                                Time:
+                                <strong class="fw-bolder" id="timer">
+                                    0
+                                </strong>
+                                milliseconds
+                            </span>
+                        </div>
+                        <div class="col-auto">
+                            <span class="fw-light">
+                                Rod length:
+                                <strong id="length-element" class="fw-bolder">
+                                    1
+                                </strong>
+                                meters
+                            </span>
+                            /
+                            <span class="fw-light">
+                                Diffusion coefficient:
+                                <strong id="alpha-element" class="fw-bolder">
+                                    0
+                                </strong>
+                            </span>
+                        </div>
+
+                    </div>
+                    <svg height="200" class="mb-3" id="rod"></svg>
+                    <small class="d-block text-center fw-light text-muted">
+                        Instantaneous heat distribution in the rod
+                    </small>
+                    <svg height="300" class="d-block" width="300" id="moment-position-heat"></svg>
+                    <small class="d-block text-center fw-light text-muted">
+                        Point-by-point heat rate chart at any moment
+                    </small>
+                </div>
+            </div>
+            <small class="fw-light text-center d-block mt-2">
+                Designed and developed by Mohammadreza Naderi Akhourmeh
+            </small>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/d3.v7.min.js"></script>
+    <script type="text/javascript" src="js/engine.js"></script>
+    <script type="text/javascript" src="js/view.js"></script>
+
+</body>
+
+</html>

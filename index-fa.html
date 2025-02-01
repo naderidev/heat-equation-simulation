@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        شبیه سازی معادله گرما
+    </title>
+    <link rel="stylesheet" href="css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body dir="rtl">
+<div class="container-xl d-flex justify-content-center align-items-center h-100">
+    <div class="d-block p-2" id="setup-sec">
+        <h3 class="yb-fat mb-1">
+            شبیه سازی توزیع گرما در یک میله
+        </h3>
+        <span class="yb-light">
+            شبیه سازی توزیع گرما در یک میله با طول مشخص با استفاده از معادله دیفرانسیل یک بعدی گرما
+        </span>
+        <div class="row mt-3 align-items-center border border-1 border-secondary p-4 rounded-2">
+            <div class="col-sm-7">
+                <div class="mb-3">
+                    <label for="rod-length" class="form-label fs-6 yb-light">طول میله بر حسب متر</label>
+                    <input type="number" class="form-control yb-light" id="rod-length" placeholder="in m">
+                </div>
+                <div class="mb-3">
+                    <label for="alpha-value" class="form-label fs-6 yb-light">ضریب پخشندگی گرما</label>
+                    <input type="number" class="form-control yb-light" id="alpha-value" placeholder="in m^2/s">
+                </div>
+                <div class="mb-3">
+                    <label for="duration-value" class="form-label fs-6 yb-light">مدت زمان شبیه سازی</label>
+                    <input type="number" class="form-control yb-light" id="duration-value" value="20000" placeholder="in ms">
+                </div>
+            </div>
+            <div class="col">
+                <button type="button" id="simulate-btn" class="btn yb-heavy w-100 btn-primary">شبیه سازی</button>
+                <small class="text-muted yb-light">
+                    شروع شبیه سازی براساس مقادیر داده شده
+                </small>
+            </div>
+        </div>
+        <small class="yb-light text-center d-block mt-2">
+            طراحی و توسعه توسط محمدرضا نادری آخورمه
+        </small>
+    </div>
+    <div class="d-block p-2 d-none" id="simulation-sec">
+        <h3 class="yb-fat mb-1">
+            شبیه سازی توزیع گرمای لحظه ای در میله
+        </h3>
+        <span class="yb-light">
+            شبیه سازی توزیع گرما در یک میله با طول مشخص با استفاده از معادله دیفرانسیل یک بعدی گرما
+        </span>
+        <div class="row mt-3 align-items-center border border-1 border-secondary p-4 rounded-2">
+            <div class="col-12">
+                <div class="row mb-2 justify-content-between">
+                    <div class="col-auto">
+                                            <span class="yb-light">
+                                                زمان:
+                                                <strong class="fw-bolder" id="timer">
+                                                    0
+                                                </strong>
+                                                میلی ثانیه
+                                            </span>
+                    </div>
+                    <div class="col-auto">
+                                            <span class="yb-light">
+                                                طول میله:
+                                                <strong id="length-element" class="fw-bolder">
+                                                    1
+                                                </strong>
+                                                متر
+                                            </span>
+                        /
+                        <span class="yb-light">
+                                               ضریب پخشندگی:
+                                                <strong id="alpha-element" class="fw-bolder">
+                                                    0
+                                                </strong>
+                                            </span>
+                    </div>
+
+                </div>
+                <svg height="200" class="mb-3" id="rod"></svg>
+                <small class="d-block text-center yb-light text-muted">
+                    توزیع گرما در لحظه در میله
+                </small>
+                <svg height="300" class="d-block" width="300" id="moment-position-heat"></svg>
+                <small class="d-block text-center yb-light text-muted">
+                    نمودار میزان گرمای نقطه به نقطه در هر لحظه
+                </small>
+            </div>
+        </div>
+        <small class="yb-light text-center d-block mt-2">
+            طراحی و توسعه توسط محمدرضا نادری آخورمه
+        </small>
+    </div>
+</div>
+<script type="text/javascript" src="js/d3.v7.min.js"></script>
+<script type="text/javascript" src="js/engine.js"></script>
+<script type="text/javascript" src="js/view.js"></script>
+
+</body>
+
+</html>
